@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #548687;
+    text-align: center;
+}
+/* .playground{
+    display: flex;
+    align-items: center;
+} */
+h1{
+    background-color: #2035357b;
+    color: whitesmoke;
+    text-shadow: 0.1rem 0.12rem rgba(0, 0, 0, 0.7);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.cotainer{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    text-align: center;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    font-size: 8vmin;
+    color: #293838e1;
+    background-color: whitesmoke;
+}
+.reset-btn{
+    height: 9vmin;
+    width: 12vmin;
+    text-align: center;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    font-size: medium;
+    font-weight: 534;
+    color: #293838e1;
+    border-radius: 3vmin;
+}
+.hidden-text{
+    margin-top: 2vmin;
+    color: rgb(30, 247, 2);
+    text-shadow: 0.01rem 0.12rem 0.3rem rgba(0, 0, 0, 0.7);
+    animation: blink-animation 0.8s steps(20, start) infinite;
+    -webkit-animation: blink-animation 0.8s steps(20, start) infinite;
+}
+@keyframes blink-animation{
+    to{
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation{
+    to{
+        visibility: hidden;
+    }
+}
+.hide{
+    display: none;
+}
