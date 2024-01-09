@@ -31,7 +31,7 @@ const resetGame = () => {
 };
 
 const gameDraw = () => {
-    resetBtn.innerText = `Draw`;
+    resetBtn.innerText = "Draw";
     hiddenText.classList.remove("hide");
 };
 
@@ -79,6 +79,7 @@ boxes.forEach((box) => {
             turnO = true;
             audioX.play();
         }
+        Count++;
         box.disabled = true;
 
         checkWinner();
