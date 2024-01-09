@@ -3,6 +3,7 @@ let resetBtn = document.querySelector(".reset-btn");
 let hiddenText = document.querySelector(".hidden-text");
 
 let turnO = true; // turn of playerO
+let Count = 0;
 
 const winPatterns = [
     [0, 1, 2],
@@ -26,6 +27,12 @@ const resetGame = () => {
     enableBoxes();
     hiddenText.classList.add("hide");
     resetBtn.innerText = "Reset";
+    Count = 0;
+};
+
+const gameDraw = () => {
+    resetBtn.innerText = `Draw`;
+    hiddenText.classList.remove("hide");
 };
 
 const disableBoxes = () => {
@@ -49,6 +56,9 @@ const checkWinner = () => {
         if(val1 !== "" && val2 !== "" && val3 !==""){
             if(val1 === val2 && val2 === val3){
                 showWinner(val1);
+            }
+            else if(Count==9){
+                gameDraw();
             }
         }
     }
