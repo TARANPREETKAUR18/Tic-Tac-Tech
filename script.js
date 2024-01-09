@@ -12,6 +12,7 @@ const winPatterns = [
     [1, 4, 7],
     [2, 5, 8],
     [2, 4, 6],
+    [3, 4, 5],
     [6, 7, 8],
 ];
 
@@ -56,11 +57,12 @@ const checkWinner = () => {
         if(val1 !== "" && val2 !== "" && val3 !==""){
             if(val1 === val2 && val2 === val3){
                 showWinner(val1);
-            }
-            else if(Count==9){
-                gameDraw();
+                return;
             }
         }
+    }
+    if(Count==9){
+        gameDraw();
     }
 };
 
